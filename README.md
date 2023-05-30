@@ -16,4 +16,9 @@
     -- Otra forma es con el producto carteciano 
     π A.dni(σA.dni = exa.dni and A.codM = exa.codM and A.fecha != exa.fecha (A x exa))
 8*) π nomMM,nomM ((ρ des ← despliegue,an← anio,codM ← codMc, codMM ← codM,nomMM ← nomM (mat ⨝ corre)) ⨝ mat)
-9*) 
+9*) alternativa 1*) A= π codM ← codMc (σ codM='M2' corre)
+                    alu ⨝ ((π dni σ codM = 'M2' bol) ⨝ (π dni,codM exa ÷ A))
+    alternativa 2 buscando el codigo de la materia*) X= π codM σ nomM='Base de Datos' mat
+                                                     A= π codM ← codMc (corre ⨝ X)
+                                                     alu ⨝ ((π dni σ codM = 'M2' bol) ⨝ (π dni,codM exa ÷ A))
+10*) 
