@@ -10,4 +10,10 @@
 6*) A= π B,C,D ρ B ← dni, C ← codM, D ← anio (mat ⨝ insc)
     Z= A ⨯ (mat ⨝ insc)
     H= σ(B=dni ∧ C≠codM ∧ D≠anio) Z
-    π dni,nomAlu (alu ⨝ H)   
+    π dni,nomAlu (alu ⨝ H)
+7*) A = rho A exa 
+    π exa.dni(A ⨝(A.codM = exa.codM and A.dni = exa.dni and A.fecha != exa.fecha) exa)
+    -- Otra forma es con el producto carteciano 
+    π A.dni(σA.dni = exa.dni and A.codM = exa.codM and A.fecha != exa.fecha (A x exa))
+8*) π nomMM,nomM ((ρ des ← despliegue,an← anio,codM ← codMc, codMM ← codM,nomMM ← nomM (mat ⨝ corre)) ⨝ mat)
+9*) 
