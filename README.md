@@ -21,4 +21,11 @@
     alternativa 2 buscando el codigo de la materia*) X= π codM σ nomM='Base de Datos' mat
                                                      A= π codM ← codMc (corre ⨝ X)
                                                      alu ⨝ ((π dni σ codM = 'M2' bol) ⨝ (π dni,codM exa ÷ A))
-10*) 
+10*) A= π dni,codM bol
+     B= π dni,codM exa
+     exa ⨝ (B-A)
+11*) A= π dni,codM bol
+     B= π dni,codM σ nota ≥ 4 exa
+     C= B-A
+     D= A - (B - C)
+     π nomAlu (alu ⨝ (π dni A - π dni D))
